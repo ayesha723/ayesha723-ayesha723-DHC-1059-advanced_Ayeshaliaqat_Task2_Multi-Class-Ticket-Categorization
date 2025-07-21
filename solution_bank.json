@@ -1,0 +1,38 @@
+{
+  "WhatsApp::Technical Issue": [
+    "Please check your internet connection and try resending the message.",
+    "Try clearing WhatsApp cache from your phone settings and restarting the app.",
+    "Reinstall WhatsApp if the issue persists. Make sure to back up your chats first."
+  ],
+  "Instagram::Login Issue": [
+    "Tap 'Forgot Password' on the login screen to reset your credentials.",
+    "Make sure you're using the correct email or phone number linked to your account.",
+    "Try logging in from a browser instead of the app. If still locked out, contact Instagram Help Center."
+  ],
+  "Chrome::Performance Issue": [
+    "Close unused tabs and clear browsing data from Settings \u2192 Privacy.",
+    "Disable unnecessary extensions by visiting chrome://extensions.",
+    "Try restarting your device. If still slow, consider updating Chrome or reinstalling."
+  ],
+  "Gmail::Delivery Issue": [
+    "Ensure you're connected to the internet and that airplane mode is off.",
+    "Try using Gmail in a different browser or device.",
+    "Check if Gmail shows an error (like Queued). If so, enable background data or sync in settings."
+  ],
+  "YouTube::Billing Issue": [
+    "Check if your payment method is valid and not expired.",
+    "Try resubscribing to Premium via desktop if mobile app fails.",
+    "If you've already been charged and not getting benefits, contact YouTube support with order ID."
+  ],
+  "Instagram::Technical Issue": [
+    "Clear Instagram's cache from app settings.",
+    "Update the app to the latest version from the Play Store or App Store.",
+    "Uninstall and reinstall the app. If the problem persists, report it to Instagram Help."
+  ],
+  
+  "WhatsApp::Messaging Issue": [
+    "Check if your internet connection is active.",
+    "Restart WhatsApp or clear app cache from phone settings.",
+    "Ensure WhatsApp has background data permissions and isn't restricted."
+  ]
+}

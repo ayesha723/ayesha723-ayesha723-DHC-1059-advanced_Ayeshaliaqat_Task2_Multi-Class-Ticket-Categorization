@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supportix.AI – App Help Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+
+    <!-- Phone 1 with Frame -->
+    <div class="mobile-frame">
+      <section class="phone phone-intro dark-bg">
+        <div class="intro-slide active" id="slide1">
+          <h1 class="centered-heading"><img src="https://png.pngtree.com/png-vector/20220611/ourmid/pngtree-chatbot-icon-chat-bot-robot-png-image_4841963.png" class="robot-logo" alt="Robot Icon"> Supportix.AI</h1>
+          <p class="intro-line">Your App Help Assistant</p>
+          <p class="footer-note">© 2025 Supportix.AI — built by Ayesha Liaqat</p>
+        </div>
+
+        <div class="intro-slide" id="slide2">
+          <div class="section">
+            <h3 class="section-heading">What is Supportix.AI?</h3>
+            <p>Supportix.AI is a smart assistant that helps you solve app issues in simple, clear language.</p>
+          </div>
+
+          <div class="section">
+            <h4 class="section-heading">App Benefits</h4>
+            <ul class="clean-list">
+              <li>Get real-time solutions to common app problems</li>
+              <li>Smart, context-aware responses</li>
+              <li>Skip browsing support forums</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h4 class="section-heading">Tips for Better Help</h4>
+            <ul class="clean-list warning-list">
+              <li>Be specific — don't just write "help"</li>
+              <li>Mention the app name clearly</li>
+              <li>Avoid slang or unclear messages</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Phone 2 with Frame -->
+    <div class="mobile-frame">
+      <section class="phone phone-chat light-bg">
+        <div class="chat-ui">
+          <div class="welcome">
+            <strong>Welcome to Supportix</strong><br><br>
+            Please describe your issue like this:<br>
+            <span class="example">Example: <em>"Instagram, I can't log in"</em></span><br><br>
+            Supported apps: WhatsApp, Instagram, Chrome, YouTube, Gmail, Facebook, Twitter, Zoom, Spotify, Snapchat, Netflix, Telegram
+          </div>
+
+          <form method="POST">
+            <label><strong>Your message:</strong></label>
+            <textarea name="user_input" rows="3" placeholder="Type your issue here..." required></textarea>
+            <input type="submit" value="Send">
+          </form>
+
+          <div class="chatbox">
+            {% if response %}
+              <div class="bot-response">{{ response|safe }}</div>
+            {% endif %}
+            {% if solution %}
+              <div class="bot-solution">{{ solution }}</div>
+            {% endif %}
+            {% if question %}
+              <div class="bot-question"><em>{{ question }}</em>
+                <div class="response-buttons">
+                  <button type="submit" name="user_input" value="yes">yes</button>
+                  <button type="submit" name="user_input" value="no">no</button>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+  <footer class="outside-footer">© 2025 Supportix.AI — built by Ayesha Liaqat</footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    const slides = document.querySelectorAll(".phone-intro .intro-slide");
+    let current = 0;
+
+    function nextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }
+
+    setInterval(nextSlide, 3000);
+
+    // Floating animation
+    const frames = document.querySelectorAll('.mobile-frame');
+    frames.forEach(frame => {
+      frame.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-10px)' },
+        { transform: 'translateY(0)' }
+      ], {
+        duration: 5000,
+        iterations: Infinity
+      });
+    });
+  </script>
+</body>
+</html>

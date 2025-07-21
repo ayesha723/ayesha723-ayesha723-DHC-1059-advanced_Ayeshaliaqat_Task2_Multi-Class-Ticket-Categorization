@@ -1,0 +1,25 @@
+app_name,ticket_text,tag
+WhatsApp,I can't send messages,Technical Issue
+WhatsApp,My account is banned,Account Issue
+Instagram,I forgot my password,Login Issue
+Instagram,My post isn't uploading,Technical Issue
+Chrome,Pages are loading very slow,Performance Issue
+Chrome,My bookmarks disappeared,Data Loss
+Facebook,Can't see friend list,Display Issue
+Facebook,My account was hacked,Security Issue
+Twitter,My tweets are not visible,Technical Issue
+Twitter,Forgot password and recovery failed,Login Issue
+YouTube,Video keeps buffering,Performance Issue
+YouTube,I'm getting ads even with Premium,Billing Issue
+Gmail,Email not sending,Delivery Issue
+Gmail,Spam filter isn't working,Filter Issue
+Zoom,Camera not working,Device Issue
+Zoom,Echo during meetings,Audio Issue
+Spotify,Songs not playing,Streaming Issue
+Spotify,App crashes when I open,Technical Issue
+Snapchat,Snaps are not sending,Network Issue
+Snapchat,Bitmoji not updating,UI Issue
+Netflix,Can't login to account,Login Issue
+Netflix,Audio is out of sync,Playback Issue
+Telegram,Notifications not coming,Notification Issue
+Telegram,App freezing on start,Technical Issue

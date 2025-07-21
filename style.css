@@ -1,0 +1,277 @@
+/* ======= GENERAL PAGE STYLE ======= */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right,#f4e5e5,#00bbab,#f4e5e5);
+  margin: 0;
+  padding: 40px 10px;
+  color: #2D2D2D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+/* ======= MOBILE FRAME STYLE ======= */
+.mobile-frame {
+  background: url('../static/images/phone.png') no-repeat center;
+  background-size: cover;
+  width: 600px;
+  height: 800px;
+  padding: 10px 10px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 6s ease-in-out infinite;
+}
+.mobile-frame {
+  overflow: hidden;
+}
+
+/* ======= FLOATING ANIMATION ======= */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ======= PHONE INNER VIEW ======= */
+.phone {
+  width: 330px;
+  height: 680px;
+  border-radius: 30px;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+  padding-top: 20px;
+  padding-bottom:10px;
+  
+}
+.phone {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.phone:hover {
+  transform: scale(1.01);
+}
+
+
+.dark-bg {
+  background-color: #015768;
+  color: white;
+}
+
+.light-bg {
+  background-color: #05e3d1;
+  color: #2D2D2D;
+}
+
+/* ======= MAIN HEADER ======= */
+h1.centered-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 10px auto;
+  padding-top: 190px;
+  padding-bottom: 0px;
+}
+
+/* Intro Paragraph (under h1) */
+.intro-line{
+  font-size: 1.1rem;
+  color: #eefeff;
+  margin: 0 auto;
+  padding-top:px ;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: monospace;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.robot-logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* ======= INTRO SECTIONS ======= */
+.section {
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00f7ff;
+}
+
+.clean-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #eeeeee;
+  margin: 10px 0;
+}
+
+.clean-list li {
+  margin-bottom: 6px;
+}
+
+.warning-list {
+  color: #ffffff;
+}
+
+.footer-note {
+  font-size: 0.75rem;
+  color: #f3ffff;
+  text-align: center;
+  padding-bottom: 0px;
+  padding-top: 220px;
+}
+
+/* ======= CHAT UI ======= */
+.chat-ui {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.welcome {
+  background-color: #E1F6F6;
+  padding: 12px;
+  border-left: 4px solid #5EBEC4;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background: #5EBEC4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #015768;
+}
+
+/* ======= CHAT MESSAGES ======= */
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.bot-response, .bot-solution, .bot-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #F0F8FF;
+  padding: 12px 14px;
+  border-radius: 16px;
+  max-width: 80%;
+  font-size: 1rem;
+  color: #204963;
+  position: relative;
+}
+
+.bot-response::before,
+.bot-solution::before,
+.bot-question::before {
+  content: '';
+  background-image: url('https://png.pngtree.com/png-vector/20220611/ourmid/pngtree-chatbot-icon-chat-bot-robot-png-image_4841963.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ======= BUTTONS ======= */
+.response-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.response-buttons button {
+  background: #3bb5bd;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.response-buttons button:hover {
+  background: #4DA1A7;
+}
+
+/* ======= FOOTER ======= */
+.outside-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #030000;
+}
+
+/* ======= SLIDES ======= */
+.intro-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: none;
+}
+
+.intro-slide.active {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.intro-slide {
+  transition: opacity 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
